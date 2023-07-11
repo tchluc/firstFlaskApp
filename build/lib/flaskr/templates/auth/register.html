@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Register{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <form method="post">
+    <div class="col-auto">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="bi bi-person"></i></div>
+          </div>
+          <input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername2" placeholder="Username" name="username" required>
+        </div>
+      </div>
+      <div class="col-auto">
+        <label class="sr-only" for="inputPassword6">password</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text"><i class="bi bi-lock"></i></div>
+      </div>
+      <input type="password" id="inputPassword6" class="form-control form-control-sm" aria-describedby="passwordHelpInline" name="password" required>
+      </div>
+      <small id="passwordHelpInline" class="text-muted">
+        Must be 8-20 characters long.
+      </small>
+    </div>
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
+    </form>
+</div>
+{% endblock %}
